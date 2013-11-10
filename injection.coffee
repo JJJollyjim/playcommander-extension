@@ -26,6 +26,10 @@ setupsocket = ->
     setuiled   "red"
     setbtntext "Connection error"
 
+  socket.onclose = (event) ->
+    setuiled   "red"
+    setbtntext "Disconnected"
+
   socket.sendMessage = (type, payload = {}) ->
     payload.clientType = "player"
     message = {
@@ -58,10 +62,10 @@ handleMessage = (socket, type, payload) ->
       setuitext  "Pairing Code: #{payload.paircode.toUpperCase()}"
       setuirems  "No"
 
-    when "command"
-      # A remote is requesting that we do something
-      playInterface[payload.command].set()
+    when "remotenum"
+      # Updated number of remotes
 
+      setuirems  if payload.num is 0 then "No" else payload.num
 
 # UI Feature
 sel.extralinks.after "
