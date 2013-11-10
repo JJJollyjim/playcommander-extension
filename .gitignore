@@ -1,0 +1,19 @@
+# JS and map files
+# Can be compiled from coffee files
+*.js
+*.map
+
+# CSS files
+# Can be compiled from scss files
+*.css
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# IDEA
+.idea

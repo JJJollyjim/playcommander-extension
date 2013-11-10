@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+
+    "name": "PlayCommander",
+    "description": "Control Google Play Music on your computer with your smartphone",
+    "version": "0.1",
+
+    "content_scripts": [
+        {
+            "matches": ["*://play.google.com/music/*"],
+            "js": ["injector.js"],
+            "css": ["style.css"]
+        }
+    ],
+
+    "web_accessible_resources": ["injection.js", "injection.map", "injector.map", "jquery.js", "leds/*.png"]
+}

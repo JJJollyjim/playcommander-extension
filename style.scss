@@ -1,0 +1,34 @@
+#pc_ui_pac {
+  float: right;
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 8px;
+  color: #999999;
+  display: none;
+}
+
+#pc_ui_btn {
+  float: right;
+  padding-right: 8px;
+
+  #pc_ui_led {
+    float: right;
+    margin-top: 6px;
+    margin-left: 2px;
+
+    width: 17px;
+    height: 17px;
+  }
+
+  .green {
+    background: url("chrome-extension://__MSG_@@extension_id__/leds/green.png");
+  }
+
+  .yellow {
+    background: url("chrome-extension://__MSG_@@extension_id__/leds/yellow.png");
+  }
+
+  .red {
+    background: url("chrome-extension://__MSG_@@extension_id__/leds/red.png");
+  }
+}
